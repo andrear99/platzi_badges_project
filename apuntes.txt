@@ -1,0 +1,15 @@
+------------------------------- APUNTES REACT ----------------------------------
+
+CREAR UN PROYECTO REACT: 
+	npx create-react-app nombre_proyecto
+
+COMPONENTES EN REACT: (ver carpeta components, apuntes en los archivos)
+Todos los componentes inician con el nombre en mayúsculas.
+
+
+------------------------------- APUNTES JS --------------------------------------
+const element = document.createElement('h1') -> Acabamos de crear un elemento html del tipo h1
+element.innerText = "Soy un nuevo elemento"; -> Le hemos añadido texto
+
+const container = document.getElementById('nombre') -> Esto guarda en "container" el elemento html que tiene como id "nombre". Así podremos trabajar con él. Por ejemplo, añadiendo más texto usando:
+container.appendChild(element);
