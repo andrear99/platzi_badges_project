@@ -15,6 +15,8 @@ import ReactDOM, { render } from 'react-dom';
 //Importo el componente
 import Badge from './components/Badge';
 
+import './styles/Global.css';
+
 const element = <h1> hola mundo!! </h1>
 const container = document.getElementById('app');
 
@@ -75,5 +77,10 @@ Vamos que es mucho mas complicado, por eso NO VAMOS A USAR ESTO. VAMOS A USAR JS
 //USO DE COMPONENTES
 
 const sitio_badge = document.getElementById('sitio_badge');
-
-render(<Badge />, sitio_badge);
+/* Lo que va al lado de Badge son los props (ver video de props de platzi) */
+render(<Badge   firstName="Andrea" 
+                lastName="Ramirez"
+                avatarUrl="https://www.pngarts.com/files/3/Employee-Avatar-PNG-Pic.png"
+                jobTitle="Junior Engineer"
+                twitter="andrear99"
+                />, sitio_badge);

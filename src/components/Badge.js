@@ -8,25 +8,43 @@ lo que le pasemos al ReactDOM.render(..., _), lo que va en ... debe ser un ELEME
 Es decir, si el componente se llama Badge, le enviaremos (<Badge/>, sitio). */
 
 //Importo la imagen desde el pc, aunque tambien podreia meter la url de internet directamente
-import logo from '../images/logo-aunna-horiz2_25.png'
+import confLogo from '../images/logo-aunna-horiz2_25.png'
 
 //Importo el estilo css
-import "../styles/Badge.css"
+import '../styles/Badge.css';
+
+// Importo bootstrap. OJO, para usarlo debemos hacer antes en el cmd: "npm install bootstrap"
+import 'bootstrap/dist/css/bootstrap.css';
 
 class Badge extends React.Component {
 
     render() { //"Cuando hagamos render de este componente, lo que se va a retornar es lo que pongamos dentro del return"
         return( 
             // Para poder usar los estilos del css es necesario que usemos clases ("class"). En React se ponen como "className".
-            <div className="badge">
-                <div className="badge_header">
-                    <img className=" " src= {logo} ></img>
-                </div>
-                <div className="badge_section-name">
-                    <img className="badge_avatar" src= "https://insurance.wolfman.es/wp-content/uploads/2020/02/perfil-avatar-hombre-icono-redondo_rubio.jpg" ></img>
-                    <h3> Richard Castle </h3>
-                </div>
-            </div>
+            <div className="Badge">
+        <div className="Badge__header">
+          <img src={confLogo} alt="Logo de la conferencia" />
+        </div>
+
+        <div className="Badge__section-name">
+          <img
+            className="Badge__avatar"
+            src={this.props.avatarUrl}
+            alt="Avatar"
+          />
+          <h1>
+            {this.props.firstName} <br /> {this.props.lastName}
+          </h1>
+        </div>
+
+        <div className="Badge__section-info">
+          <h3>{this.props.jobTitle}</h3>
+          <div>@{this.props.twitter}</div>
+        </div>
+
+        <div className="Badge__footer">#platziconf</div>
+      </div>
+            
         )
     }
 }
