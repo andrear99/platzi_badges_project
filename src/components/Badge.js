@@ -29,7 +29,7 @@ class Badge extends React.Component {
         <div className="Badge__section-name">
           <img
             className="Badge__avatar"
-            src={this.props.avatarUrl}
+            src={this.props.avatarUrl} //this.props se refiere a las props que se le han enviado al Badge en index.js cuando hemos hecho el render(...)
             alt="Avatar"
           />
           <h1>
